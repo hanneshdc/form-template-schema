@@ -74,10 +74,10 @@
 					"additionalItems": {
 						"oneOf": [
 							{
-								"$ref": "#/definitions/text"
+								"$ref": "elements/text.schema.json"
 							},
 							{
-								"$ref": "#/definitions/textbox"
+								"$ref": "elements/textbox.schema.json"
 							}
 						]
 					}
@@ -93,72 +93,6 @@
 				"@revisionNumber",
 				"@xmlElementName",
 				"template"
-			]
-		},
-		"text": {
-			"type": "object",
-			"properties": {
-				"@name": {
-					"type": "string"
-				},
-				"@id": {
-					"type": "string"
-				},
-				"@required": {
-					"enum": [
-						"true",
-						"false"
-					]
-				},
-				"@xmlElementName": {
-					"enum": [
-						"text"
-					]
-				},
-				"#text": {
-					"type": "string"
-				}
-			},
-			"additionalProperties": false,
-			"required": [
-				"@name",
-				"@id",
-				"@required",
-				"@xmlElementName",
-				"#text"
-			]
-		},
-		"textbox": {
-			"type": "object",
-			"properties": {
-				"@name": {
-					"type": "string"
-				},
-				"@id": {
-					"type": "string"
-				},
-				"@required": {
-					"enum": [
-						"true",
-						"false"
-					]
-				},
-				"@xmlElementName": {
-					"enum": [
-						"textbox"
-					]
-				},
-				"#text": {
-					"type": "string"
-				}
-			},
-			"additionalProperties": false,
-			"required": [
-				"@name",
-				"@id",
-				"@required",
-				"@xmlElementName",
-				"#text"
 			]
 		}
 	}

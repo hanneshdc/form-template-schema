@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const INPUT_FILE = 'schemas/v1.schema.json';
 const SOURCE_FOLDER = 'schemas';
-const TARGET_FOLDER = 'generated-typescript'
+const TARGET_FOLDER = 'build'
 const _ = require('lodash');
 
 (async () => {

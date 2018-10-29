@@ -1,0 +1,33 @@
+{
+	"type": "object",
+	"properties": {
+		"@name": {
+			"type": "string"
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@required": {
+			"enum": [
+				"true",
+				"false"
+			]
+		},
+		"@xmlElementName": {
+			"enum": [
+				"textbox"
+			]
+		},
+		"#text": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@name",
+		"@id",
+		"@required",
+		"@xmlElementName",
+		"#text"
+	]
+}
