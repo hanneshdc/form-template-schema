@@ -29,7 +29,11 @@
 										"empty"
 									]
 								}
-							}
+							},
+							"required": [
+								"@xmlElementName"
+							],
+							"additionalProperties": false
 						}
 					]
 				}

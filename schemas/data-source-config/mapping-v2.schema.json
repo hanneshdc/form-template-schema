@@ -31,7 +31,14 @@
 						"#text": {
 							"type": "string"
 						}
-					}
+					},
+					"required": [
+						"@id",
+						"@type",
+						"@xmlElementName",
+						"#text"
+					],
+					"additionalProperties": false
 				},
 				{
 					"properties": {
@@ -52,7 +59,14 @@
 						"#text": {
 							"type": "string"
 						}
-					}
+					},
+					"required": [
+						"@id",
+						"@type",
+						"@xmlElementName",
+						"#text"
+					],
+					"additionalProperties": false
 				}
 			]
 		}

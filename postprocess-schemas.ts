@@ -10,13 +10,13 @@ function processDirectory(path: string) {
         if (file.isDirectory()) {
             processDirectory(fullPath);
         } else {
-            console.log('processing file')
             processFile(fullPath);
         }
     }
 }
 
 function processFile(file: string) {
+    console.log('processing ' + file)
     const jsonSchema = JSON.parse(readFileSync(file, 'utf8'));
     processSchema(jsonSchema);
     writeFileSync(file, JSON.stringify(jsonSchema, null, '\t'))
@@ -29,7 +29,7 @@ function processSchema(jsonSchema: any): void {
     for (const key in jsonSchema) {
         processSchema(jsonSchema[key]);
     }
-    if (jsonSchema.type === 'object' && jsonSchema.properties) {
+    if (jsonSchema.properties) {
         jsonSchema.required = Object.keys(jsonSchema.properties);
         jsonSchema.additionalProperties = false;
     }

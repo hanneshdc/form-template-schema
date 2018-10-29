@@ -51,7 +51,13 @@
 						"#text": {
 							"type": "string"
 						}
-					}
+					},
+					"required": [
+						"@id",
+						"@xmlElementName",
+						"#text"
+					],
+					"additionalProperties": false
 				}
 			]
 		}

@@ -444,7 +444,13 @@
 										"tde_rest_path"
 									]
 								}
-							}
+							},
+							"required": [
+								"@id",
+								"@xmlElementName",
+								"#text"
+							],
+							"additionalProperties": false
 						},
 						{
 							"properties": {
@@ -459,7 +465,13 @@
 								"#text": {
 									"type": "string"
 								}
-							}
+							},
+							"required": [
+								"@id",
+								"@xmlElementName",
+								"#text"
+							],
+							"additionalProperties": false
 						}
 					]
 				}
@@ -546,7 +558,13 @@
 									"$ref": "#/definitions/mappingV2"
 								}
 							}
-						}
+						},
+						"required": [
+							"@id",
+							"@xmlElementName",
+							"filter"
+						],
+						"additionalProperties": false
 					}
 				}
 			},
@@ -588,7 +606,11 @@
 												"empty"
 											]
 										}
-									}
+									},
+									"required": [
+										"@xmlElementName"
+									],
+									"additionalProperties": false
 								}
 							]
 						}
@@ -636,7 +658,13 @@
 									"$ref": "#/definitions/mappingV2"
 								}
 							}
-						}
+						},
+						"required": [
+							"@id",
+							"@xmlElementName",
+							"populate"
+						],
+						"additionalProperties": false
 					}
 				}
 			},
@@ -680,7 +708,14 @@
 								"#text": {
 									"type": "string"
 								}
-							}
+							},
+							"required": [
+								"@id",
+								"@type",
+								"@xmlElementName",
+								"#text"
+							],
+							"additionalProperties": false
 						},
 						{
 							"properties": {
@@ -701,7 +736,14 @@
 								"#text": {
 									"type": "string"
 								}
-							}
+							},
+							"required": [
+								"@id",
+								"@type",
+								"@xmlElementName",
+								"#text"
+							],
+							"additionalProperties": false
 						}
 					]
 				}

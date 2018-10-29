@@ -26,7 +26,13 @@
 							"$ref": "mapping-v2.schema.json"
 						}
 					}
-				}
+				},
+				"required": [
+					"@id",
+					"@xmlElementName",
+					"populate"
+				],
+				"additionalProperties": false
 			}
 		}
 	},
