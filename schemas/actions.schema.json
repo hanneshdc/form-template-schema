@@ -1,0 +1,15 @@
+{
+	"title": "actions",
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"actions"
+			]
+		}
+	},
+	"required": [
+		"@xmlElementName"
+	],
+	"additionalProperties": false
+}

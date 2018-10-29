@@ -1,0 +1,59 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"queryRules"
+			]
+		},
+		"queryRules": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/queryRule"
+			}
+		}
+	},
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"queryRules"
+	],
+	"additionalProperties": false,
+	"definitions": {
+		"queryRule": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@dataSourceId": {
+					"type": "string"
+				},
+				"@filterId": {
+					"type": "string"
+				},
+				"@displayId": {
+					"type": "string"
+				},
+				"@populateId": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"queryRule"
+					]
+				}
+			},
+			"required": [
+				"@id",
+				"@dataSourceId",
+				"@filterId",
+				"@displayId",
+				"@populateId",
+				"@xmlElementName"
+			],
+			"additionalProperties": false
+		}
+	}
+}

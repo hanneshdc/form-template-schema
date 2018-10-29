@@ -1,0 +1,165 @@
+{
+	"title": "Form Template Definition",
+	"type": "object",
+	"properties": {
+		"template": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "#/definitions/template"
+				}
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"template"
+	],
+	"definitions": {
+		"template": {
+			"type": "object",
+			"properties": {
+				"@name": {
+					"type": "string"
+				},
+				"@formType": {
+					"enum": [
+						"standard",
+						"dvir",
+						"dvir.3rdSignature"
+					]
+				},
+				"@versioning": {
+					"enum": [
+						"disabled",
+						"enabled"
+					]
+				},
+				"@formBuilderVersion": {
+					"type": "string"
+				},
+				"@defaultView": {
+					"enum": [
+						"flat",
+						"section"
+					]
+				},
+				"@revisionNumber": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"template"
+					]
+				},
+				"template": {
+					"type": "array",
+					"items": [
+						{
+							"$ref": "versioning-options.schema.json"
+						},
+						{
+							"$ref": "actions.schema.json"
+						},
+						{
+							"$ref": "validations.schema.json"
+						},
+						{
+							"$ref": "events.schema.json"
+						},
+						{
+							"$ref": "data-source-config/data-source-config.schema.json"
+						}
+					],
+					"additionalItems": {
+						"oneOf": [
+							{
+								"$ref": "#/definitions/text"
+							},
+							{
+								"$ref": "#/definitions/textbox"
+							}
+						]
+					}
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"@name",
+				"@formType",
+				"@versioning",
+				"@formBuilderVersion",
+				"@defaultView",
+				"@revisionNumber",
+				"@xmlElementName",
+				"template"
+			]
+		},
+		"text": {
+			"type": "object",
+			"properties": {
+				"@name": {
+					"type": "string"
+				},
+				"@id": {
+					"type": "string"
+				},
+				"@required": {
+					"enum": [
+						"true",
+						"false"
+					]
+				},
+				"@xmlElementName": {
+					"enum": [
+						"text"
+					]
+				},
+				"#text": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"@name",
+				"@id",
+				"@required",
+				"@xmlElementName",
+				"#text"
+			]
+		},
+		"textbox": {
+			"type": "object",
+			"properties": {
+				"@name": {
+					"type": "string"
+				},
+				"@id": {
+					"type": "string"
+				},
+				"@required": {
+					"enum": [
+						"true",
+						"false"
+					]
+				},
+				"@xmlElementName": {
+					"enum": [
+						"textbox"
+					]
+				},
+				"#text": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"@name",
+				"@id",
+				"@required",
+				"@xmlElementName",
+				"#text"
+			]
+		}
+	}
+}

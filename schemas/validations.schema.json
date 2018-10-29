@@ -1,0 +1,52 @@
+{
+	"title": "validations",
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"validations"
+			]
+		},
+		"validations": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"@id": {
+						"type": "string"
+					},
+					"@name": {
+						"enum": [
+							"IsTextOnly",
+							"IsNumericOnly",
+							"IsAlphaNumeric",
+							"IsUnitedStatesPhoneNumber",
+							"IsValidEmailAddress",
+							"IsDdMmYyyyFormatDate",
+							"IsMmDdYyyyFormatDate",
+							"IsYyyyMmDdFormatDate",
+							"IsHhMmAmPmFormatTime",
+							"IsHhMm24HrFormatTime"
+						]
+					},
+					"@xmlElementName": {
+						"enum": [
+							"validation"
+						]
+					}
+				},
+				"required": [
+					"@id",
+					"@name",
+					"@xmlElementName"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": [
+		"@xmlElementName",
+		"validations"
+	],
+	"additionalProperties": false
+}

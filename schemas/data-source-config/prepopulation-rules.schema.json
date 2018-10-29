@@ -1,0 +1,47 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"prepopulationRules"
+			]
+		},
+		"prepopulationRules": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/prepopulationRule"
+			}
+		}
+	},
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"prepopulationRules"
+	],
+	"additionalProperties": false,
+	"definitions": {
+		"prepopulationRule": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@queryRuleId": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"ppRule"
+					]
+				}
+			},
+			"required": [
+				"@id",
+				"@queryRuleId",
+				"@xmlElementName"
+			],
+			"additionalProperties": false
+		}
+	}
+}

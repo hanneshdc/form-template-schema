@@ -1,0 +1,42 @@
+{
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"dataSourceConfig"
+			]
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@version": {
+			"enum": [
+				"1.1"
+			]
+		},
+		"dataSourceConfig": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "query-rules.schema.json"
+				},
+				{
+					"$ref": "prepopulation-rules.schema.json"
+				},
+				{
+					"$ref": "query-fields.schema.json"
+				},
+				{
+					"$ref": "data-sources.schema.json"
+				}
+			]
+		}
+	},
+	"required": [
+		"@xmlElementName",
+		"@id",
+		"@version",
+		"dataSourceConfig"
+	],
+	"additionalProperties": false
+}

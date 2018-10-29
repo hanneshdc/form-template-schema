@@ -1,0 +1,15 @@
+{
+	"title": "versioningOptions",
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"versioningOptions"
+			]
+		}
+	},
+	"required": [
+		"@xmlElementName"
+	],
+	"additionalProperties": false
+}

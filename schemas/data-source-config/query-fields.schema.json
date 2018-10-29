@@ -1,0 +1,17 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"queryFields"
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName"
+	]
+}

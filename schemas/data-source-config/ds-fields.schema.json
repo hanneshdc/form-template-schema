@@ -1,0 +1,47 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"dsFields"
+			]
+		},
+		"dsFields": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"@id": {
+						"type": "string"
+					},
+					"@dataType": {
+						"type": "string"
+					},
+					"@xmlElementName": {
+						"enum": [
+							"dsField"
+						]
+					},
+					"#text": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"@id",
+					"@dataType",
+					"@xmlElementName",
+					"#text"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"dsFields"
+	]
+}

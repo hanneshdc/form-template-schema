@@ -1,0 +1,15 @@
+{
+	"title": "events",
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"events"
+			]
+		}
+	},
+	"required": [
+		"@xmlElementName"
+	],
+	"additionalProperties": false
+}

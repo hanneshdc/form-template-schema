@@ -1,0 +1,65 @@
+{
+	"type": "object",
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"server"
+			]
+		},
+		"server": {
+			"type": "array",
+			"items": [
+				{
+					"properties": {
+						"@id": {
+							"type": "string"
+						},
+						"@xmlElementName": {
+							"enum": [
+								"type"
+							]
+						},
+						"#text": {
+							"enum": [
+								"tde_standard_table",
+								"tde_custom_table",
+								"local",
+								"tde_rest_path"
+							]
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"@id",
+						"@xmlElementName",
+						"#text"
+					]
+				},
+				{
+					"properties": {
+						"@id": {
+							"type": "string"
+						},
+						"@xmlElementName": {
+							"enum": [
+								"tableName"
+							]
+						},
+						"#text": {
+							"type": "string"
+						}
+					}
+				}
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"server"
+	]
+}

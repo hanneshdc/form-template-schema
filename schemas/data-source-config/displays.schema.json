@@ -1,0 +1,51 @@
+{
+	"type": "object",
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"displays"
+			]
+		},
+		"displays": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"display"
+					]
+				},
+				"display": {
+					"type": "array",
+					"items": [
+						{
+							"properties": {
+								"@xmlElementName": {
+									"enum": [
+										"empty"
+									]
+								}
+							}
+						}
+					]
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"@id",
+				"@xmlElementName",
+				"display"
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"displays"
+	]
+}

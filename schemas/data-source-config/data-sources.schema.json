@@ -1,0 +1,65 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"dataSources"
+			]
+		},
+		"dataSources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/dataSource"
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"dataSources"
+	],
+	"definitions": {
+		"dataSource": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"dataSource"
+					]
+				},
+				"dataSource": {
+					"type": "array",
+					"items": [
+						{
+							"$ref": "server.schema.json"
+						},
+						{
+							"$ref": "ds-fields.schema.json"
+						},
+						{
+							"$ref": "filters.schema.json"
+						},
+						{
+							"$ref": "displays.schema.json"
+						},
+						{
+							"$ref": "populates.schema.json"
+						}
+					],
+					"additionalItems": false
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"@id",
+				"@xmlElementName",
+				"dataSource"
+			]
+		}
+	}
+}

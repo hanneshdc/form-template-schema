@@ -1,0 +1,39 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"populates"
+			]
+		},
+		"populates": {
+			"type": "array",
+			"items": {
+				"properties": {
+					"@id": {
+						"type": "string"
+					},
+					"@xmlElementName": {
+						"enum": [
+							"populate"
+						]
+					},
+					"populate": {
+						"type": "array",
+						"items": {
+							"$ref": "mapping-v2.schema.json"
+						}
+					}
+				}
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"populates"
+	]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "form-template-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ajv validate -s schemas/form-template.schema.json -d test-data/form-template-example.json",
+    "build": "ts-node compile.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "ajv": "^6.5.3",
+    "json-schema-to-typescript": "^6.0.1",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  }
+}

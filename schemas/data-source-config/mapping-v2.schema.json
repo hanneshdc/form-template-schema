@@ -1,0 +1,66 @@
+{
+	"type": "object",
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"mappingV2"
+			]
+		},
+		"mappingV2": {
+			"type": "array",
+			"items": [
+				{
+					"properties": {
+						"@id": {
+							"type": "string"
+						},
+						"@type": {
+							"enum": [
+								"userContext",
+								"dsFieldId"
+							]
+						},
+						"@xmlElementName": {
+							"enum": [
+								"src"
+							]
+						},
+						"#text": {
+							"type": "string"
+						}
+					}
+				},
+				{
+					"properties": {
+						"@id": {
+							"type": "string"
+						},
+						"@type": {
+							"enum": [
+								"dsFieldId",
+								"formFieldId"
+							]
+						},
+						"@xmlElementName": {
+							"enum": [
+								"dst"
+							]
+						},
+						"#text": {
+							"type": "string"
+						}
+					}
+				}
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"mappingV2"
+	]
+}

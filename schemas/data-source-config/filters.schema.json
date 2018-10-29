@@ -1,0 +1,39 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"filters"
+			]
+		},
+		"filters": {
+			"type": "array",
+			"items": {
+				"properties": {
+					"@id": {
+						"type": "string"
+					},
+					"@xmlElementName": {
+						"enum": [
+							"filter"
+						]
+					},
+					"filter": {
+						"type": "array",
+						"items": {
+							"$ref": "mapping-v2.schema.json"
+						}
+					}
+				}
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"filters"
+	]
+}
