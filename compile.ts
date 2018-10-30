@@ -1,8 +1,8 @@
 import { readSync, readFileSync, writeFileSync } from "fs";
 import { dirname } from "path";
 import mkdirp from 'mkdirp';
+import * as json2Ts from 'json-schema-to-typescript';
 
-const json2Ts = require('json-schema-to-typescript');
 const fs = require('fs');
 const path = require('path');
 const INPUT_FILE = 'schemas/v1.schema.json';
@@ -26,7 +26,10 @@ const _ = require('lodash');
         }
     }
 })()
-    .catch((e) => console.error(e.message));
+    .catch((e) => {
+        console.error(e.message);
+        process.exit(1);
+    });
 
 interface ICompileResult {
     dependencies: IDependency[];
@@ -42,7 +45,7 @@ async function compile(file: string): Promise<ICompileResult> {
     const bannerComment = generateTypescriptImports(dependencies, file);
     const typescriptSource = await json2Ts.compileFromFile(file, {
         unreachableDefinitions: true,
-        bannerComment,
+        bannerComment
     });
     await new Promise((resolve, reject) => {
         mkdirp(dirname(outFile), (err, made) => {
@@ -50,6 +53,7 @@ async function compile(file: string): Promise<ICompileResult> {
         });
     });
     writeFileSync(outFile, typescriptSource);
+    console.log('compiled ' + file);
 
     return {
         dependencies
