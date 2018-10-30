@@ -6,10 +6,61 @@
 			"enum": [
 				"versioningOptions"
 			]
+		},
+		"versioningOptions": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "#/definitions/client"
+				}
+			]
 		}
 	},
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"definitions": {
+		"client": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"client"
+					]
+				},
+				"client": {
+					"type": "array",
+					"items": [
+						{
+							"$ref": "#/definitions/defaultUpdateViewMode"
+						}
+					]
+				}
+			},
+			"required": [
+				"@xmlElementName",
+				"client"
+			],
+			"additionalProperties": false
+		},
+		"defaultUpdateViewMode": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"defaultUpdateViewMode"
+					]
+				},
+				"#text": {
+					"enum": [
+						"highlightChangedItems"
+					]
+				}
+			},
+			"required": [
+				"@xmlElementName",
+				"#text"
+			],
+			"additionalProperties": false
+		}
+	}
 }

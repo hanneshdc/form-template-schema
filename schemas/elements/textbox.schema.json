@@ -26,6 +26,9 @@
 		},
 		"#text": {
 			"type": "string"
+		},
+		"@dsQueryRule": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,

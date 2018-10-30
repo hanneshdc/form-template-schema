@@ -3,7 +3,7 @@ import readdir from 'recursive-readdir';
 import { readFileSync } from 'fs';
 import { basename } from 'path';
 import $RefParser from 'json-schema-ref-parser';
-const ROOT_SCHEMA = 'schemas/v1.schema.json';
+const ROOT_SCHEMA = 'schemas/root.schema.json';
 const TEST_FILE = 'test-data/qabca-forms.json';
 
 (async () => {

@@ -1,0 +1,26 @@
+{
+	"properties": {
+		"@id": {
+			"type": "string"
+		},
+		"@formFieldId": {
+			"type": "string"
+		},
+		"@dsFieldId": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"mapping"
+			]
+		}
+	},
+	"required": [
+		"@id",
+		"@formFieldId",
+		"@dsFieldId",
+		"@xmlElementName"
+	],
+	"title": "mapping",
+	"additionalProperties": false
+}

@@ -19,6 +19,11 @@
 		"template": {
 			"type": "object",
 			"properties": {
+				"@formBuilderVersion": {
+					"enum": [
+						"1"
+					]
+				},
 				"@name": {
 					"type": "string"
 				},
@@ -30,11 +35,6 @@
 				"@versioning": {
 					"enum": [
 						"disabled"
-					]
-				},
-				"@formBuilderVersion": {
-					"enum": [
-						"1"
 					]
 				},
 				"@defaultView": {

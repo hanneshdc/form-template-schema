@@ -23,7 +23,14 @@
 					"filter": {
 						"type": "array",
 						"items": {
-							"$ref": "mapping-v2.schema.json"
+							"anyOf": [
+								{
+									"$ref": "mapping-v2.schema.json"
+								},
+								{
+									"$ref": "mapping.schema.json"
+								}
+							]
 						}
 					}
 				},

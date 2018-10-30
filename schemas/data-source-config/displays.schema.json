@@ -40,8 +40,15 @@
 							"properties": {
 								"@xmlElementName": {
 									"enum": [
-										"empty"
+										"empty",
+										"dsFieldId"
 									]
+								},
+								"@id": {
+									"type": "string"
+								},
+								"#text": {
+									"type": "string"
 								}
 							},
 							"required": [

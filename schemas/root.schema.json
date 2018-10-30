@@ -1,0 +1,11 @@
+{
+	"anyOf": [
+		{
+			"$ref": "v1.schema.json"
+		},
+		{
+			"$ref": "v3.schema.json"
+		}
+	],
+	"title": "root"
+}

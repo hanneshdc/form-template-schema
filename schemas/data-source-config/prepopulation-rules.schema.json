@@ -17,8 +17,7 @@
 	},
 	"required": [
 		"@id",
-		"@xmlElementName",
-		"prepopulationRules"
+		"@xmlElementName"
 	],
 	"additionalProperties": false,
 	"definitions": {
