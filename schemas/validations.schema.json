@@ -48,5 +48,6 @@
 		"@xmlElementName",
 		"validations"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"$id": "schemas/validations.schema.json"
 }

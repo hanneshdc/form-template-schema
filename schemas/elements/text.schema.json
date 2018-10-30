@@ -29,5 +29,7 @@
 		"@required",
 		"@xmlElementName",
 		"#text"
-	]
+	],
+	"title": "text",
+	"$id": "schemas/elements/text.schema.json"
 }

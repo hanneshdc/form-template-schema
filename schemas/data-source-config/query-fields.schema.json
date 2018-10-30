@@ -13,5 +13,7 @@
 	"required": [
 		"@id",
 		"@xmlElementName"
-	]
+	],
+	"title": "queryFields",
+	"$id": "schemas/data-source-config/query-fields.schema.json"
 }

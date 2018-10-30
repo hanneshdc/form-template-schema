@@ -1,5 +1,5 @@
 {
-	"title": "Form Template Definition",
+	"title": "v1",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -95,5 +95,6 @@
 				"template"
 			]
 		}
-	}
+	},
+	"$id": "schemas/v1.schema.json"
 }

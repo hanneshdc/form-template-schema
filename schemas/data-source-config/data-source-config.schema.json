@@ -38,5 +38,7 @@
 		"@version",
 		"dataSourceConfig"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"title": "dataSourceConfig",
+	"$id": "schemas/data-source-config/data-source-config.schema.json"
 }

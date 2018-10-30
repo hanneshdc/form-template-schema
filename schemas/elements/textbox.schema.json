@@ -18,6 +18,12 @@
 				"textbox"
 			]
 		},
+		"@validations": {
+			"type": "string"
+		},
+		"@maxCharacters": {
+			"type": "string"
+		},
 		"#text": {
 			"type": "string"
 		}
@@ -28,6 +34,8 @@
 		"@id",
 		"@required",
 		"@xmlElementName",
-		"#text"
-	]
+		"@maxCharacters"
+	],
+	"title": "textbox",
+	"$id": "schemas/elements/textbox.schema.json"
 }

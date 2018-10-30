@@ -10,6 +10,20 @@
 			]
 		},
 		"displays": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/display"
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"displays"
+	],
+	"definitions": {
+		"display": {
 			"properties": {
 				"@id": {
 					"type": "string"
@@ -46,10 +60,6 @@
 			]
 		}
 	},
-	"additionalProperties": false,
-	"required": [
-		"@id",
-		"@xmlElementName",
-		"displays"
-	]
+	"title": "displays",
+	"$id": "schemas/data-source-config/displays.schema.json"
 }

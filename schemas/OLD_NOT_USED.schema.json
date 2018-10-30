@@ -1,5 +1,5 @@
 {
-	"title": "Form Template Definition",
+	"title": "oldNotUsed",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -821,5 +821,6 @@
 				"#text"
 			]
 		}
-	}
+	},
+	"$id": "schemas/OLD_NOT_USED.schema.json"
 }

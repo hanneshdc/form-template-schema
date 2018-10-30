@@ -11,5 +11,6 @@
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"$id": "schemas/events.schema.json"
 }
