@@ -45,9 +45,7 @@
 		}
 	},
 	"required": [
-		"@xmlElementName",
-		"validations"
+		"@xmlElementName"
 	],
-	"additionalProperties": false,
-	"$id": "schemas/validations.schema.json"
+	"additionalProperties": false
 }

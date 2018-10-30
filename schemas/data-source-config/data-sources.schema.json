@@ -62,6 +62,5 @@
 			]
 		}
 	},
-	"title": "dataSources",
-	"$id": "schemas/data-source-config/data-sources.schema.json"
+	"title": "dataSources"
 }

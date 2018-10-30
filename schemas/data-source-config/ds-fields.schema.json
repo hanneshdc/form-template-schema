@@ -44,6 +44,5 @@
 		"@xmlElementName",
 		"dsFields"
 	],
-	"title": "dsFields",
-	"$id": "schemas/data-source-config/ds-fields.schema.json"
+	"title": "dsFields"
 }

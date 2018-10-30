@@ -60,6 +60,5 @@
 			]
 		}
 	},
-	"title": "displays",
-	"$id": "schemas/data-source-config/displays.schema.json"
+	"title": "displays"
 }

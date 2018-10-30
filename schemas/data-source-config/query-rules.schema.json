@@ -56,6 +56,5 @@
 			"additionalProperties": false
 		}
 	},
-	"title": "queryRules",
-	"$id": "schemas/data-source-config/query-rules.schema.json"
+	"title": "queryRules"
 }

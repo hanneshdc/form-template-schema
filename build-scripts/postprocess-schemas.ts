@@ -1,27 +1,25 @@
-import { readdirSync, readFileSync, writeFileSync } from "fs";
-import { type } from "os";
+import { readFileSync, writeFileSync } from "fs";
 import { basename } from "path";
 import _ from "lodash";
+import readdir from 'recursive-readdir';
 
-processDirectory('schemas');
+const FOLDER = 'schemas';
 
-function processDirectory(path: string) {
-    const files = readdirSync(path, { withFileTypes: true });
+(async () => {
+    const files = await readdir(FOLDER);
     for (const file of files) {
-        const fullPath = path + '/' + file.name;
-        if (file.isDirectory()) {
-            processDirectory(fullPath);
-        } else {
-            processFile(fullPath);
-        }
+        processFile(file);
     }
-}
+})()
+    .catch((e) => {
+        console.error(e);
+        process.exit(1);
+    });
 
 function processFile(file: string) {
     console.log('processing ' + file)
     const jsonSchema = JSON.parse(readFileSync(file, 'utf8'));
     jsonSchema.title = _.camelCase(basename(file).split('.')[0]);
-    jsonSchema.$id = file;
     processSchema(jsonSchema);
     writeFileSync(file, JSON.stringify(jsonSchema, null, '\t'))
 }

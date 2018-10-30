@@ -36,6 +36,5 @@
 		"@xmlElementName",
 		"@maxCharacters"
 	],
-	"title": "textbox",
-	"$id": "schemas/elements/textbox.schema.json"
+	"title": "textbox"
 }

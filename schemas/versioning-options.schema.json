@@ -11,6 +11,5 @@
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false,
-	"$id": "schemas/versioning-options.schema.json"
+	"additionalProperties": false
 }

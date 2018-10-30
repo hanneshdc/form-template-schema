@@ -2,6 +2,7 @@ import { readSync, readFileSync, writeFileSync } from "fs";
 import { dirname } from "path";
 import mkdirp from 'mkdirp';
 import * as json2Ts from 'json-schema-to-typescript';
+import readdir from 'recursive-readdir';
 
 const fs = require('fs');
 const path = require('path');
@@ -11,19 +12,9 @@ const TARGET_FOLDER = 'build'
 const _ = require('lodash');
 
 (async () => {
-
-    const filesToParse = [ INPUT_FILE ];
-    const parsedFiles = new Set<string>();
-
-    while(filesToParse.length > 0) {
-        const file = filesToParse.pop()!;
-        const {dependencies} = await compile(file);
-        parsedFiles.add(file);
-        for (const dependency of dependencies) {
-            if (!parsedFiles.has(dependency.fileName)) {
-                filesToParse.push(dependency.fileName);
-            }
-        }
+    const filesToParse = await readdir(SOURCE_FOLDER);
+    for (const file of filesToParse) {
+        await compile(file);
     }
 })()
     .catch((e) => {
@@ -31,11 +22,7 @@ const _ = require('lodash');
         process.exit(1);
     });
 
-interface ICompileResult {
-    dependencies: IDependency[];
-}
-
-async function compile(file: string): Promise<ICompileResult> {
+async function compile(file: string): Promise<void> {
 
     console.log(`Compiling ${file}`);
 
@@ -53,11 +40,6 @@ async function compile(file: string): Promise<ICompileResult> {
         });
     });
     writeFileSync(outFile, typescriptSource);
-    console.log('compiled ' + file);
-
-    return {
-        dependencies
-    };
 }
 
 function inFileToOutFile(inFile: string) {

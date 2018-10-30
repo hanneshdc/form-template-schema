@@ -44,6 +44,5 @@
 			"additionalProperties": false
 		}
 	},
-	"title": "prepopulationRules",
-	"$id": "schemas/data-source-config/prepopulation-rules.schema.json"
+	"title": "prepopulationRules"
 }

@@ -68,6 +68,5 @@
 		"@xmlElementName",
 		"server"
 	],
-	"title": "server",
-	"$id": "schemas/data-source-config/server.schema.json"
+	"title": "server"
 }

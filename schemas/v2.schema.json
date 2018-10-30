@@ -1,5 +1,5 @@
 {
-	"title": "v1",
+	"title": "v2",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -24,22 +24,24 @@
 				},
 				"@formType": {
 					"enum": [
-						"standard"
+						"standard",
+						"dvir",
+						"dvir.3rdSignature"
 					]
 				},
 				"@versioning": {
 					"enum": [
-						"disabled"
+						"disabled",
+						"enabled"
 					]
 				},
 				"@formBuilderVersion": {
-					"enum": [
-						"1"
-					]
+					"type": "string"
 				},
 				"@defaultView": {
 					"enum": [
-						"flat"
+						"flat",
+						"section"
 					]
 				},
 				"@revisionNumber": {

@@ -42,6 +42,5 @@
 		"@xmlElementName",
 		"populates"
 	],
-	"title": "populates",
-	"$id": "schemas/data-source-config/populates.schema.json"
+	"title": "populates"
 }

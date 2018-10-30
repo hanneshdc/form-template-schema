@@ -11,6 +11,5 @@
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false,
-	"$id": "schemas/actions.schema.json"
+	"additionalProperties": false
 }

@@ -42,6 +42,5 @@
 		"@xmlElementName",
 		"filters"
 	],
-	"title": "filters",
-	"$id": "schemas/data-source-config/filters.schema.json"
+	"title": "filters"
 }

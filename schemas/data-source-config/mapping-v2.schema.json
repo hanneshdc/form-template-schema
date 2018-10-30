@@ -77,6 +77,5 @@
 		"@xmlElementName",
 		"mappingV2"
 	],
-	"title": "mappingV2",
-	"$id": "schemas/data-source-config/mapping-v2.schema.json"
+	"title": "mappingV2"
 }
