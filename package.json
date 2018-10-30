@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ajv validate -s schemas/form-template.schema.json -d test-data/form-template-example.json",
+    "test": "ajv validate -s schemas/v1.schema.json -r schemas/**/*.schema.json -d test-data/form-template-example.json",
     "build": "ts-node compile.ts",
     "prebuild": "ts-node postprocess-schemas.ts",
     "pretest": "npm run build"
