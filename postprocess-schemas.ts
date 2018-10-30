@@ -1,5 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync } from "fs";
 import { type } from "os";
+import { basename } from "path";
+import _ from "lodash";
 
 processDirectory('schemas');
 
@@ -18,6 +20,8 @@ function processDirectory(path: string) {
 function processFile(file: string) {
     console.log('processing ' + file)
     const jsonSchema = JSON.parse(readFileSync(file, 'utf8'));
+    jsonSchema.title = _.camelCase(basename(file).split('.')[0]);
+    jsonSchema.$id = file;
     processSchema(jsonSchema);
     writeFileSync(file, JSON.stringify(jsonSchema, null, '\t'))
 }
@@ -30,7 +34,7 @@ function processSchema(jsonSchema: any): void {
         processSchema(jsonSchema[key]);
     }
     if (jsonSchema.properties) {
-        jsonSchema.required = Object.keys(jsonSchema.properties);
+        // jsonSchema.required = Object.keys(jsonSchema.properties);
         jsonSchema.additionalProperties = false;
     }
 }
