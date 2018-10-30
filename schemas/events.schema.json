@@ -6,10 +6,67 @@
 			"enum": [
 				"events"
 			]
+		},
+		"events": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/event"
+			}
 		}
 	},
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"definitions": {
+		"event": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@implicit": {
+					"enum": [
+						"true"
+					]
+				},
+				"@trigger": {
+					"type": "string"
+				},
+				"@additionalTriggerRequirements": {
+					"type": "string"
+				},
+				"@targetId": {
+					"type": "string"
+				},
+				"@action": {
+					"type": "string"
+				},
+				"@data": {
+					"enum": [
+						"False",
+						"True"
+					]
+				},
+				"@execute": {
+					"enum": [
+						""
+					]
+				},
+				"@xmlElementName": {
+					"enum": [
+						"event"
+					]
+				}
+			},
+			"required": [
+				"@id",
+				"@trigger",
+				"@targetId",
+				"@action",
+				"@data",
+				"@execute"
+			],
+			"additionalProperties": false
+		}
+	}
 }
