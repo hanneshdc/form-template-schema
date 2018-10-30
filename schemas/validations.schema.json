@@ -17,6 +17,10 @@
 					},
 					"@name": {
 						"enum": [
+							"IsNotEmpty",
+							"IsSelected",
+							"IsNotSelected",
+							"IsSigned",
 							"IsTextOnly",
 							"IsNumericOnly",
 							"IsAlphaNumeric",
@@ -32,6 +36,11 @@
 					"@xmlElementName": {
 						"enum": [
 							"validation"
+						]
+					},
+					"@data": {
+						"enum": [
+							"Failed"
 						]
 					}
 				},

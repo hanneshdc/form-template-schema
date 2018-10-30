@@ -6,10 +6,41 @@
 			"enum": [
 				"actions"
 			]
+		},
+		"actions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/action"
+			}
 		}
 	},
 	"required": [
 		"@xmlElementName"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"definitions": {
+		"action": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@name": {
+					"enum": [
+						"SetVisibility"
+					]
+				},
+				"@xmlElementName": {
+					"enum": [
+						"action"
+					]
+				}
+			},
+			"required": [
+				"@id",
+				"@name",
+				"@xmlElementName"
+			],
+			"additionalProperties": false
+		}
+	}
 }
