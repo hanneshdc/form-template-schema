@@ -1,0 +1,14 @@
+{
+	"anyOf": [
+		{
+			"$ref": "text.schema.json"
+		},
+		{
+			"$ref": "textbox.schema.json"
+		},
+		{
+			"$ref": "layout/section.schema.json"
+		}
+	],
+	"title": "anyElement"
+}

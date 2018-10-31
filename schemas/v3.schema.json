@@ -8,7 +8,8 @@
 				{
 					"$ref": "#/definitions/template"
 				}
-			]
+			],
+			"additionalItems": false
 		}
 	},
 	"additionalProperties": false,
@@ -71,18 +72,12 @@
 						},
 						{
 							"$ref": "data-source-config/data-source-config.schema.json"
+						},
+						{
+							"$ref": "elements/any-element.schema.json"
 						}
 					],
-					"additionalItems": {
-						"oneOf": [
-							{
-								"$ref": "elements/text.schema.json"
-							},
-							{
-								"$ref": "elements/textbox.schema.json"
-							}
-						]
-					}
+					"additionalItems": false
 				}
 			},
 			"additionalProperties": false,

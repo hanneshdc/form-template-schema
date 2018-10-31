@@ -1,0 +1,17 @@
+{
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"content"
+			]
+		},
+		"content": {
+			"type": "array",
+			"items": {
+				"$ref": "../any-element.schema.json"
+			}
+		}
+	},
+	"title": "content",
+	"additionalProperties": false
+}

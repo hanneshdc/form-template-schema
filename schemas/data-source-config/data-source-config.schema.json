@@ -29,7 +29,8 @@
 				{
 					"$ref": "data-sources.schema.json"
 				}
-			]
+			],
+			"additionalItems": false
 		}
 	},
 	"required": [

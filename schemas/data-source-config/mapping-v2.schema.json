@@ -68,7 +68,8 @@
 					],
 					"additionalProperties": false
 				}
-			]
+			],
+			"additionalItems": false
 		}
 	},
 	"additionalProperties": false,

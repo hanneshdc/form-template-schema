@@ -32,7 +32,11 @@ function processSchema(jsonSchema: any): void {
         processSchema(jsonSchema[key]);
     }
     if (jsonSchema.properties) {
-        // jsonSchema.required = Object.keys(jsonSchema.properties);
         jsonSchema.additionalProperties = false;
+    }
+    if (jsonSchema.type === 'array' && Array.isArray(jsonSchema.items)) {
+        if (jsonSchema.additionalItems === undefined) {
+            jsonSchema.additionalItems = false;
+        }
     }
 }
