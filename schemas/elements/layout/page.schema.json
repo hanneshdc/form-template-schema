@@ -1,3 +1,25 @@
 {
-	"title": "page"
+	"title": "page",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"page"
+			]
+		},
+		"@id": {
+			"type": "string"
+		},
+		"page": {
+			"type": "array",
+			"items": {
+				"$ref": "../any-element.schema.json"
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@xmlElementName",
+		"page"
+	]
 }

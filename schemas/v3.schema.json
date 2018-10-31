@@ -74,7 +74,10 @@
 							"$ref": "data-source-config/data-source-config.schema.json"
 						},
 						{
-							"$ref": "elements/any-element.schema.json"
+							"$ref": "elements/layout/content.schema.json"
+						},
+						{
+							"$ref": "elements/not-supported-text.schema.json"
 						}
 					],
 					"additionalItems": false

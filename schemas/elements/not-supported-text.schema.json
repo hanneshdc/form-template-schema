@@ -1,0 +1,29 @@
+{
+	"type": "object",
+	"properties": {
+		"@name": {
+			"enum": [
+				"label"
+			]
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@xmlElementName": {
+			"enum": [
+				"text"
+			]
+		},
+		"#text": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@name",
+		"@id",
+		"@xmlElementName",
+		"#text"
+	],
+	"title": "notSupportedText"
+}

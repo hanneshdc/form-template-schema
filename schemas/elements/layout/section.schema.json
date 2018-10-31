@@ -1,3 +1,38 @@
 {
-	"title": "section"
+	"title": "section",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"section"
+			]
+		},
+		"@name": {
+			"type": "string"
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@required": {
+			"enum": [
+				"false"
+			]
+		},
+		"@actions": {
+			"type": "string"
+		},
+		"section": {
+			"type": "array",
+			"items": {
+				"$ref": "page.schema.json"
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@id",
+		"@name",
+		"@xmlElementName",
+		"@required",
+		"section"
+	]
 }
