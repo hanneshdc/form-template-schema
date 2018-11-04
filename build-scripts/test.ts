@@ -2,27 +2,33 @@ import Ajv from 'ajv';
 import readdir from 'recursive-readdir';
 import { readFileSync } from 'fs';
 import { basename } from 'path';
-import $RefParser from 'json-schema-ref-parser';
-const ROOT_SCHEMA = 'schemas/root.schema.json';
+import _ from 'lodash';
+import betterAjvErrors from 'better-ajv-errors';
+
+const SCHEMA = 'build/bundle.schema.json';
 const TEST_FILE = 'test-data/qabca-forms.json';
 
 (async () => {
-    const ajv = new Ajv();
-    const refParser = new $RefParser();
-    const schema = await refParser.dereference(ROOT_SCHEMA);
+    const ajv = new Ajv({ jsonPointers: true });
+    const schema = JSON.parse(readFileSync(SCHEMA, 'utf8'));
 
     const formTemplates = JSON.parse(readFileSync(TEST_FILE, 'utf8'));
     for (const template of formTemplates) {
-        const definition = JSON.parse(template.definition);
+        const data = JSON.parse(template.definition);
         console.log(`Testing ${template.name} from ${basename(TEST_FILE)}`);
-        await ajv.validate(schema, definition);
+        await ajv.validate(schema, data);
         if (ajv.errors) {
-            throw new Error(ajv.errorsText(ajv.errors));
+            for (const error of ajv.errors) {
+                const output = betterAjvErrors(schema, data, [error]);
+                console.log(output);
+            }
+                
+            throw new Error('AJV error, see logs for more details');
         }
     }
 })()
     .catch((e) => {
-        console.error(e.message);
+        console.error(e && e.stack || e);
         process.exit(1);
     });
 

@@ -1,19 +1,18 @@
-import { readSync, readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 import { dirname } from "path";
 import mkdirp from 'mkdirp';
 import * as json2Ts from 'json-schema-to-typescript';
 import readdir from 'recursive-readdir';
 
-const fs = require('fs');
 const path = require('path');
 const SOURCE_FOLDER = 'schemas';
-const TARGET_FOLDER = 'build'
+const TARGET_FOLDER = 'build';
 const _ = require('lodash');
 
 (async () => {
     const filesToParse = await readdir(SOURCE_FOLDER);
     for (const file of filesToParse) {
-        await compile(file);
+        await compileToTs(file);
     }
 })()
     .catch((e) => {
@@ -21,7 +20,7 @@ const _ = require('lodash');
         process.exit(1);
     });
 
-async function compile(file: string): Promise<void> {
+async function compileToTs(file: string): Promise<void> {
 
     console.log(`Compiling ${file}`);
 

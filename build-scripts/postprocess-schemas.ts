@@ -19,7 +19,8 @@ const FOLDER = 'schemas';
 function processFile(file: string) {
     console.log('processing ' + file)
     const jsonSchema = JSON.parse(readFileSync(file, 'utf8'));
-    jsonSchema.title = _.camelCase(basename(file).split('.')[0]);
+    const title = _.camelCase(basename(file).split('.')[0]);
+    jsonSchema.title = title;
     processSchema(jsonSchema);
     writeFileSync(file, JSON.stringify(jsonSchema, null, '\t'))
 }

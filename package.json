@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ts-node build-scripts/test.ts",
-    "build": "ts-node build-scripts/compile.ts",
+    "build": "ts-node build-scripts/compile-to-ts.ts && ts-node build-scripts/compile-to-bundle.ts",
     "prebuild": "ts-node build-scripts/postprocess-schemas.ts",
     "pretest": "npm run build"
   },
@@ -16,6 +16,7 @@
     "@types/mkdirp": "^0.5.2",
     "@types/recursive-readdir": "^2.2.0",
     "ajv": "^6.5.3",
+    "better-ajv-errors": "^0.6.1",
     "json-schema-ref-parser": "^6.0.1",
     "json-schema-to-typescript": "^6.0.1",
     "lodash": "^4.17.11",
