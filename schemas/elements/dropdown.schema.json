@@ -1,0 +1,40 @@
+{
+	"type": "object",
+	"properties": {
+		"@name": {
+			"type": "string"
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@required": {
+			"enum": [
+				"true",
+				"false"
+			]
+		},
+		"@xmlElementName": {
+			"enum": [
+				"dropdown"
+			]
+		},
+		"@validations": {
+			"type": "string"
+		},
+		"dropdown": {
+			"type": "array",
+			"items": {
+				"$ref": "option.schema.json"
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@name",
+		"@id",
+		"@required",
+		"@xmlElementName",
+		"dropdown"
+	],
+	"title": "dropdown"
+}

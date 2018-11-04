@@ -1,0 +1,14 @@
+{
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"option"
+			]
+		},
+		"#text": {
+			"type": "string"
+		}
+	},
+	"title": "option",
+	"additionalProperties": false
+}

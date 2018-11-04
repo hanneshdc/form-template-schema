@@ -7,6 +7,9 @@
 			"$ref": "textbox.schema.json"
 		},
 		{
+			"$ref": "dropdown.schema.json"
+		},
+		{
 			"$ref": "layout/section.schema.json"
 		}
 	],
