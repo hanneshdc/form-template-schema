@@ -3,7 +3,7 @@
 	"properties": {
 		"@xmlElementName": {
 			"enum": [
-				"textbox"
+				"dvirControl"
 			]
 		},
 		"@name": {
@@ -21,13 +21,7 @@
 		"@validations": {
 			"type": "string"
 		},
-		"@maxCharacters": {
-			"type": "string"
-		},
-		"#text": {
-			"type": "string"
-		},
-		"@dsQueryRule": {
+		"@events": {
 			"type": "string"
 		},
 		"@parentId": {
@@ -39,8 +33,7 @@
 		"@name",
 		"@id",
 		"@required",
-		"@xmlElementName",
-		"@maxCharacters"
+		"@xmlElementName"
 	],
-	"title": "textbox"
+	"title": "dvirControl"
 }

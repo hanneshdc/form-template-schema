@@ -3,7 +3,7 @@
 	"properties": {
 		"@xmlElementName": {
 			"enum": [
-				"textbox"
+				"checkbox"
 			]
 		},
 		"@name": {
@@ -21,15 +21,6 @@
 		"@validations": {
 			"type": "string"
 		},
-		"@maxCharacters": {
-			"type": "string"
-		},
-		"#text": {
-			"type": "string"
-		},
-		"@dsQueryRule": {
-			"type": "string"
-		},
 		"@parentId": {
 			"type": "string"
 		}
@@ -39,8 +30,7 @@
 		"@name",
 		"@id",
 		"@required",
-		"@xmlElementName",
-		"@maxCharacters"
+		"@xmlElementName"
 	],
-	"title": "textbox"
+	"title": "checkbox"
 }

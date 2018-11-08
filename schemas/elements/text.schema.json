@@ -1,6 +1,11 @@
 {
 	"type": "object",
 	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"text"
+			]
+		},
 		"@name": {
 			"type": "string"
 		},
@@ -13,10 +18,8 @@
 				"false"
 			]
 		},
-		"@xmlElementName": {
-			"enum": [
-				"text"
-			]
+		"@parentId": {
+			"type": "string"
 		},
 		"#text": {
 			"type": "string"

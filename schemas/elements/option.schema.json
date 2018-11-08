@@ -10,5 +10,9 @@
 		}
 	},
 	"title": "option",
+	"required": [
+		"@xmlElementName",
+		"#text"
+	],
 	"additionalProperties": false
 }

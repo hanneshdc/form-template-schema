@@ -1,0 +1,92 @@
+{
+	"type": "object",
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"dvirSummary"
+			]
+		},
+		"@name": {
+			"type": "string"
+		},
+		"@id": {
+			"type": "string"
+		},
+		"@required": {
+			"enum": [
+				"false"
+			]
+		},
+		"dvirSummary": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "#/definitions/passed"
+				},
+				{
+					"$ref": "#/definitions/failed"
+				},
+				{
+					"$ref": "#/definitions/fixed"
+				},
+				{
+					"$ref": "#/definitions/na"
+				}
+			],
+			"additionalItems": false
+		},
+		"@parentId": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"@name",
+		"@id",
+		"@required",
+		"@xmlElementName"
+	],
+	"title": "dvirSummary",
+	"definitions": {
+		"passed": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"passed"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"failed": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"failed"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"na": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"na"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"fixed": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"fixed"
+					]
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

@@ -10,6 +10,18 @@
 			"$ref": "dropdown.schema.json"
 		},
 		{
+			"$ref": "checkbox.schema.json"
+		},
+		{
+			"$ref": "dvir-control.schema.json"
+		},
+		{
+			"$ref": "dvir-summary.schema.json"
+		},
+		{
+			"$ref": "signature.schema.json"
+		},
+		{
 			"$ref": "layout/section.schema.json"
 		}
 	],
