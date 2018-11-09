@@ -10,7 +10,7 @@ const SCHEMA = 'build/bundle.schema.json';
 const TEST_FILE = 'test-data/qabca-forms.json';
 
 (async () => {
-    const ajv = new Ajv({ jsonPointers: true });
+    const ajv = new Ajv({ jsonPointers: true, verbose: true });
     const schema = JSON.parse(readFileSync(SCHEMA, 'utf8'));
 
     const formTemplates = JSON.parse(readFileSync(TEST_FILE, 'utf8'));
@@ -27,19 +27,22 @@ const TEST_FILE = 'test-data/qabca-forms.json';
                 }
                 const betterError = betterErrors[0];
                 console.log(colors.red(betterError.error));
-                if (!betterError.end) {
-                    continue;
+                const title = error.parentSchema && (error.parentSchema as any).title as string | undefined;
+                const printableTitle = title || 'title-less schema';
+                if (printableTitle) {
+                    console.log(colors.red(`While validating against ${printableTitle}`));
                 }
-                console.log(`Line ${betterError.start.line} to ${betterError.end.line}`);
-                if ((betterError.end.line - betterError.start.line) >= 35) {
+                let startLine = betterError.start.line;
+                let endLine = betterError.end ? betterError.end.line : betterError.start.line;
+                console.log(`Line ${startLine} to ${endLine}`);
+                if ((endLine - startLine) >= 35) {
                     continue;
                 }
 
                 const CONTEXT = 5;
-                console.log(dataText.slice(betterError.start.line - CONTEXT, betterError.start.line - 1).join('\n'));
-                console.log(colors.yellow(dataText.slice(betterError.start.line - 1, betterError.end.line).join('\n')));
-                console.log(dataText.slice(betterError.end.line, betterError.end.line + CONTEXT).join('\n'));
-                
+                console.log(dataText.slice(startLine - CONTEXT, startLine - 1).join('\n'));
+                console.log(colors.yellow(dataText.slice(startLine - 1, endLine).join('\n')));
+                console.log(dataText.slice(endLine, endLine + CONTEXT).join('\n'));
             }
                 
             throw new Error('AJV error, see logs for more details');
