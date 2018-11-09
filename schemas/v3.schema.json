@@ -90,10 +90,10 @@
 				"@versioning",
 				"@formBuilderVersion",
 				"@defaultView",
-				"@revisionNumber",
 				"@xmlElementName",
 				"template"
-			]
+			],
+			"title": "v3.template"
 		}
 	}
 }

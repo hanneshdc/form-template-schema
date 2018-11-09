@@ -53,7 +53,8 @@
 				"@populateId",
 				"@xmlElementName"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"title": "queryRules.queryRule"
 		}
 	},
 	"title": "queryRules"

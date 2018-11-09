@@ -59,7 +59,8 @@
 				"@id",
 				"@xmlElementName",
 				"dataSource"
-			]
+			],
+			"title": "dataSources.dataSource"
 		}
 	},
 	"title": "dataSources"

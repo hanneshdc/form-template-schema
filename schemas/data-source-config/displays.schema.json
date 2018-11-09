@@ -10,10 +10,14 @@
 			]
 		},
 		"displays": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/display"
-			}
+			"oneOf": [
+				{
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/display"
+					}
+				}
+			]
 		}
 	},
 	"additionalProperties": false,
@@ -37,24 +41,14 @@
 					"type": "array",
 					"items": [
 						{
-							"properties": {
-								"@xmlElementName": {
-									"enum": [
-										"empty",
-										"dsFieldId"
-									]
+							"oneOf": [
+								{
+									"$ref": "#/definitions/displayText"
 								},
-								"@id": {
-									"type": "string"
-								},
-								"#text": {
-									"type": "string"
+								{
+									"$ref": "empty.schema.json"
 								}
-							},
-							"required": [
-								"@xmlElementName"
-							],
-							"additionalProperties": false
+							]
 						}
 					],
 					"additionalItems": false
@@ -65,7 +59,30 @@
 				"@id",
 				"@xmlElementName",
 				"display"
-			]
+			],
+			"title": "displays.display"
+		},
+		"displayText": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"dsFieldId"
+					]
+				},
+				"@id": {
+					"type": "string"
+				},
+				"#text": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"@xmlElementName",
+				"@id",
+				"#text"
+			],
+			"additionalProperties": false,
+			"title": "displays.displayText"
 		}
 	},
 	"title": "displays"

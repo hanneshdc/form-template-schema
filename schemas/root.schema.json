@@ -4,6 +4,9 @@
 			"$ref": "v1.schema.json"
 		},
 		{
+			"$ref": "v2.schema.json"
+		},
+		{
 			"$ref": "v3.schema.json"
 		}
 	],

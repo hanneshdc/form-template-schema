@@ -21,6 +21,11 @@ function processFile(file: string) {
     const jsonSchema = JSON.parse(readFileSync(file, 'utf8'));
     const title = _.camelCase(basename(file).split('.')[0]);
     jsonSchema.title = title;
+    if (jsonSchema.definitions) {
+        for (const key of Object.keys(jsonSchema.definitions)) {
+            jsonSchema.definitions[key].title = title + '.' + key;
+        }
+    }
     processSchema(jsonSchema);
     writeFileSync(file, JSON.stringify(jsonSchema, null, '\t'))
 }

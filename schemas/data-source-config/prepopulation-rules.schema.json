@@ -40,7 +40,8 @@
 				"@queryRuleId",
 				"@xmlElementName"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"title": "prepopulationRules.prepopulationRule"
 		}
 	},
 	"title": "prepopulationRules"

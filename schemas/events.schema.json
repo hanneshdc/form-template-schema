@@ -44,7 +44,8 @@
 				"@data": {
 					"enum": [
 						"False",
-						"True"
+						"True",
+						""
 					]
 				},
 				"@execute": {
@@ -66,7 +67,8 @@
 				"@data",
 				"@execute"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"title": "events.event"
 		}
 	}
 }

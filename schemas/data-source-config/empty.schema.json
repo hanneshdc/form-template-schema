@@ -1,0 +1,14 @@
+{
+	"properties": {
+		"@xmlElementName": {
+			"enum": [
+				"empty"
+			]
+		}
+	},
+	"required": [
+		"@xmlElementName"
+	],
+	"additionalProperties": false,
+	"title": "empty"
+}

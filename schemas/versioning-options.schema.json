@@ -43,7 +43,8 @@
 				"@xmlElementName",
 				"client"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"title": "versioningOptions.client"
 		},
 		"defaultUpdateViewMode": {
 			"properties": {
@@ -62,7 +63,8 @@
 				"@xmlElementName",
 				"#text"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"title": "versioningOptions.defaultUpdateViewMode"
 		}
 	}
 }

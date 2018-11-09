@@ -11,35 +11,7 @@
 		"filters": {
 			"type": "array",
 			"items": {
-				"properties": {
-					"@id": {
-						"type": "string"
-					},
-					"@xmlElementName": {
-						"enum": [
-							"filter"
-						]
-					},
-					"filter": {
-						"type": "array",
-						"items": {
-							"anyOf": [
-								{
-									"$ref": "mapping-v2.schema.json"
-								},
-								{
-									"$ref": "mapping.schema.json"
-								}
-							]
-						}
-					}
-				},
-				"required": [
-					"@id",
-					"@xmlElementName",
-					"filter"
-				],
-				"additionalProperties": false
+				"$ref": "#/definitions/filter"
 			}
 		}
 	},
@@ -49,5 +21,39 @@
 		"@xmlElementName",
 		"filters"
 	],
-	"title": "filters"
+	"title": "filters",
+	"definitions": {
+		"filter": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"filter"
+					]
+				},
+				"filter": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "mapping-v2.schema.json"
+							},
+							{
+								"$ref": "mapping.schema.json"
+							}
+						]
+					}
+				}
+			},
+			"required": [
+				"@id",
+				"@xmlElementName",
+				"filter"
+			],
+			"additionalProperties": false,
+			"title": "filters.filter"
+		}
+	}
 }

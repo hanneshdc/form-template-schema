@@ -1,5 +1,5 @@
 {
-	"title": "v1",
+	"title": "v2",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -22,7 +22,7 @@
 			"properties": {
 				"@formBuilderVersion": {
 					"enum": [
-						"1"
+						"2"
 					]
 				},
 				"@name": {
@@ -40,7 +40,8 @@
 				},
 				"@defaultView": {
 					"enum": [
-						"flat"
+						"flat",
+						"section"
 					]
 				},
 				"@revisionNumber": {
@@ -68,11 +69,15 @@
 						},
 						{
 							"$ref": "data-source-config/data-source-config.schema.json"
+						},
+						{
+							"$ref": "elements/layout/content.schema.json"
+						},
+						{
+							"$ref": "elements/not-supported-text.schema.json"
 						}
 					],
-					"additionalItems": {
-						"$ref": "elements/any-element.schema.json"
-					}
+					"additionalItems": false
 				}
 			},
 			"additionalProperties": false,
@@ -85,7 +90,7 @@
 				"@xmlElementName",
 				"template"
 			],
-			"title": "v1.template"
+			"title": "v2.template"
 		}
 	}
 }

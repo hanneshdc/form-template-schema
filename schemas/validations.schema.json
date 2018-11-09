@@ -39,9 +39,7 @@
 						]
 					},
 					"@data": {
-						"enum": [
-							"Failed"
-						]
+						"type": "string"
 					}
 				},
 				"required": [
