@@ -25,7 +25,7 @@
 			"enum": [
 				"passed",
 				"failed",
-				"na"
+				"n/a"
 			]
 		},
 		"@events": {

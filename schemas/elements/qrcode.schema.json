@@ -23,6 +23,9 @@
 		},
 		"@verificationValue": {
 			"type": "string"
+		},
+		"@validations": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,
@@ -30,7 +33,8 @@
 		"@name",
 		"@id",
 		"@required",
-		"@xmlElementName"
+		"@xmlElementName",
+		"@verificationValue"
 	],
 	"title": "qrcode"
 }

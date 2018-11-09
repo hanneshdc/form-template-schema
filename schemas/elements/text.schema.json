@@ -23,6 +23,9 @@
 		},
 		"#text": {
 			"type": "string"
+		},
+		"@actions": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,

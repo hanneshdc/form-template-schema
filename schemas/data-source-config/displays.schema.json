@@ -43,7 +43,10 @@
 						{
 							"oneOf": [
 								{
-									"$ref": "#/definitions/displayText"
+									"$ref": "#/definitions/dsFieldId"
+								},
+								{
+									"$ref": "#/definitions/freeFormText"
 								},
 								{
 									"$ref": "empty.schema.json"
@@ -62,7 +65,7 @@
 			],
 			"title": "displays.display"
 		},
-		"displayText": {
+		"dsFieldId": {
 			"properties": {
 				"@xmlElementName": {
 					"enum": [
@@ -82,7 +85,29 @@
 				"#text"
 			],
 			"additionalProperties": false,
-			"title": "displays.displayText"
+			"title": "displays.dsFieldId"
+		},
+		"freeFormText": {
+			"properties": {
+				"@xmlElementName": {
+					"enum": [
+						"freeFormText"
+					]
+				},
+				"@id": {
+					"type": "string"
+				},
+				"#text": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"@xmlElementName",
+				"@id",
+				"#text"
+			],
+			"additionalProperties": false,
+			"title": "displays.freeFormText"
 		}
 	},
 	"title": "displays"

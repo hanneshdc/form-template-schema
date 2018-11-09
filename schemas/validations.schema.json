@@ -18,6 +18,7 @@
 					"@name": {
 						"enum": [
 							"IsNotEmpty",
+							"IsEmpty",
 							"IsSelected",
 							"IsNotSelected",
 							"IsSigned",

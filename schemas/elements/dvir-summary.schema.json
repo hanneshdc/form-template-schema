@@ -17,6 +17,9 @@
 				"false"
 			]
 		},
+		"@actions": {
+			"type": "string"
+		},
 		"dvirSummary": {
 			"type": "array",
 			"items": [
