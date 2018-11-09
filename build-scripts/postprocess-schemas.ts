@@ -39,6 +39,11 @@ function processSchema(jsonSchema: any): void {
     }
     if (jsonSchema.properties) {
         jsonSchema.additionalProperties = false;
+        if (jsonSchema.required) {
+            jsonSchema.required = jsonSchema.required.filter((key: string) => {
+                return key in jsonSchema.properties;
+            });
+        }        
     }
     if (jsonSchema.type === 'array' && Array.isArray(jsonSchema.items)) {
         if (jsonSchema.additionalItems === undefined) {
