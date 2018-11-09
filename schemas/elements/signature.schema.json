@@ -21,10 +21,13 @@
 		"@parentId": {
 			"type": "string"
 		},
+		"@events": {
+			"type": "string"
+		},
 		"@validations": {
 			"type": "string"
 		},
-		"@events": {
+		"@actions": {
 			"type": "string"
 		},
 		"@clearBeforeEdit": {

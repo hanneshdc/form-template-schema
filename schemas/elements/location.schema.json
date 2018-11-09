@@ -18,13 +18,16 @@
 				"false"
 			]
 		},
-		"@validations": {
-			"type": "string"
-		},
 		"@parentId": {
 			"type": "string"
 		},
 		"@events": {
+			"type": "string"
+		},
+		"@validations": {
+			"type": "string"
+		},
+		"@actions": {
 			"type": "string"
 		}
 	},

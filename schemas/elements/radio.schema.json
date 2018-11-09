@@ -3,7 +3,7 @@
 	"properties": {
 		"@xmlElementName": {
 			"enum": [
-				"dropdown"
+				"radio"
 			]
 		},
 		"@name": {
@@ -18,7 +18,7 @@
 				"false"
 			]
 		},
-		"dropdown": {
+		"radio": {
 			"type": "array",
 			"items": {
 				"$ref": "option.schema.json"
@@ -43,7 +43,7 @@
 		"@id",
 		"@required",
 		"@xmlElementName",
-		"dropdown"
+		"radio"
 	],
-	"title": "dropdown"
+	"title": "radio"
 }

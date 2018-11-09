@@ -10,6 +10,9 @@
 			"$ref": "dropdown.schema.json"
 		},
 		{
+			"$ref": "radio.schema.json"
+		},
+		{
 			"$ref": "checkbox.schema.json"
 		},
 		{
@@ -23,6 +26,9 @@
 		},
 		{
 			"$ref": "location.schema.json"
+		},
+		{
+			"$ref": "qrcode.schema.json"
 		},
 		{
 			"$ref": "image.schema.json"

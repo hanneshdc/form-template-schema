@@ -18,12 +18,6 @@
 				"false"
 			]
 		},
-		"@validations": {
-			"type": "string"
-		},
-		"@events": {
-			"type": "string"
-		},
 		"@parentId": {
 			"type": "string"
 		},
@@ -33,6 +27,15 @@
 				"failed",
 				"na"
 			]
+		},
+		"@events": {
+			"type": "string"
+		},
+		"@validations": {
+			"type": "string"
+		},
+		"@actions": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,

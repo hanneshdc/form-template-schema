@@ -3,7 +3,7 @@
 	"properties": {
 		"@xmlElementName": {
 			"enum": [
-				"dropdown"
+				"qrcode"
 			]
 		},
 		"@name": {
@@ -18,22 +18,10 @@
 				"false"
 			]
 		},
-		"dropdown": {
-			"type": "array",
-			"items": {
-				"$ref": "option.schema.json"
-			}
-		},
 		"@parentId": {
 			"type": "string"
 		},
-		"@events": {
-			"type": "string"
-		},
-		"@validations": {
-			"type": "string"
-		},
-		"@actions": {
+		"@verificationValue": {
 			"type": "string"
 		}
 	},
@@ -42,8 +30,7 @@
 		"@name",
 		"@id",
 		"@required",
-		"@xmlElementName",
-		"dropdown"
+		"@xmlElementName"
 	],
-	"title": "dropdown"
+	"title": "qrcode"
 }
