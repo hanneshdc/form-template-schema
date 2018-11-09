@@ -1,5 +1,5 @@
 {
-	"title": "v2",
+	"title": "v2Plus",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -22,7 +22,9 @@
 			"properties": {
 				"@formBuilderVersion": {
 					"enum": [
-						"2"
+						"2",
+						"3",
+						"4"
 					]
 				},
 				"@name": {
@@ -30,12 +32,15 @@
 				},
 				"@formType": {
 					"enum": [
-						"standard"
+						"standard",
+						"dvir",
+						"dvir.3rdSignature"
 					]
 				},
 				"@versioning": {
 					"enum": [
-						"disabled"
+						"disabled",
+						"enabled"
 					]
 				},
 				"@defaultView": {
@@ -51,6 +56,12 @@
 					"enum": [
 						"template"
 					]
+				},
+				"@initialRepeatableElementId": {
+					"type": "string"
+				},
+				"@maxInputElements": {
+					"type": "string"
 				},
 				"template": {
 					"type": "array",
@@ -90,7 +101,7 @@
 				"@xmlElementName",
 				"template"
 			],
-			"title": "v2.template"
+			"title": "v2Plus.template"
 		}
 	}
 }

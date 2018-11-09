@@ -1,9 +1,9 @@
 {
-	"title": "section",
+	"type": "object",
 	"properties": {
 		"@xmlElementName": {
 			"enum": [
-				"section"
+				"location"
 			]
 		},
 		"@name": {
@@ -14,28 +14,26 @@
 		},
 		"@required": {
 			"enum": [
+				"true",
 				"false"
 			]
 		},
-		"@actions": {
+		"@validations": {
 			"type": "string"
 		},
-		"section": {
-			"type": "array",
-			"items": {
-				"$ref": "page.schema.json"
-			}
-		},
 		"@parentId": {
+			"type": "string"
+		},
+		"@events": {
 			"type": "string"
 		}
 	},
 	"additionalProperties": false,
 	"required": [
-		"@id",
 		"@name",
-		"@xmlElementName",
+		"@id",
 		"@required",
-		"section"
-	]
+		"@xmlElementName"
+	],
+	"title": "location"
 }

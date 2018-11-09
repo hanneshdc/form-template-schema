@@ -22,6 +22,12 @@
 			"$ref": "signature.schema.json"
 		},
 		{
+			"$ref": "location.schema.json"
+		},
+		{
+			"$ref": "image.schema.json"
+		},
+		{
 			"$ref": "layout/section.schema.json"
 		}
 	],

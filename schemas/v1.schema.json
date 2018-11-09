@@ -51,6 +51,12 @@
 						"template"
 					]
 				},
+				"@initialRepeatableElementId": {
+					"type": "string"
+				},
+				"@maxInputElements": {
+					"type": "string"
+				},
 				"template": {
 					"type": "array",
 					"items": [

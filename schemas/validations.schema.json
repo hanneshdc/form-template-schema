@@ -30,7 +30,8 @@
 							"IsMmDdYyyyFormatDate",
 							"IsYyyyMmDdFormatDate",
 							"IsHhMmAmPmFormatTime",
-							"IsHhMm24HrFormatTime"
+							"IsHhMm24HrFormatTime",
+							"IsNotSigned"
 						]
 					},
 					"@xmlElementName": {

@@ -23,6 +23,9 @@
 		},
 		"@parentId": {
 			"type": "string"
+		},
+		"@events": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,
