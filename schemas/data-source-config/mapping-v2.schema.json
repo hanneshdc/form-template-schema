@@ -21,7 +21,8 @@
 							"enum": [
 								"userContext",
 								"dsFieldId",
-								"queryFieldId"
+								"queryFieldId",
+								"rawValue"
 							]
 						},
 						"@xmlElementName": {
@@ -49,7 +50,9 @@
 						"@type": {
 							"enum": [
 								"dsFieldId",
-								"formFieldId"
+								"formFieldId",
+								"urlParam",
+								"recordIdentifier"
 							]
 						},
 						"@xmlElementName": {
@@ -64,8 +67,7 @@
 					"required": [
 						"@id",
 						"@type",
-						"@xmlElementName",
-						"#text"
+						"@xmlElementName"
 					],
 					"additionalProperties": false
 				}

@@ -39,22 +39,19 @@
 				},
 				"display": {
 					"type": "array",
-					"items": [
-						{
-							"oneOf": [
-								{
-									"$ref": "#/definitions/dsFieldId"
-								},
-								{
-									"$ref": "#/definitions/freeFormText"
-								},
-								{
-									"$ref": "empty.schema.json"
-								}
-							]
-						}
-					],
-					"additionalItems": false
+					"items": {
+						"oneOf": [
+							{
+								"$ref": "#/definitions/dsFieldId"
+							},
+							{
+								"$ref": "#/definitions/freeFormText"
+							},
+							{
+								"$ref": "empty.schema.json"
+							}
+						]
+					}
 				}
 			},
 			"additionalProperties": false,
