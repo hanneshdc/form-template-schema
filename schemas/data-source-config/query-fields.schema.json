@@ -7,6 +7,12 @@
 			"enum": [
 				"queryFields"
 			]
+		},
+		"queryFields": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/queryField"
+			}
 		}
 	},
 	"additionalProperties": false,
@@ -14,5 +20,33 @@
 		"@id",
 		"@xmlElementName"
 	],
-	"title": "queryFields"
+	"title": "queryFields",
+	"definitions": {
+		"queryField": {
+			"properties": {
+				"@id": {
+					"type": "string"
+				},
+				"@queryRuleId": {
+					"type": "string"
+				},
+				"@dsFieldId": {
+					"type": "string"
+				},
+				"@xmlElementName": {
+					"enum": [
+						"queryField"
+					]
+				}
+			},
+			"required": [
+				"@id",
+				"@queryRuleId",
+				"@dsFieldId",
+				"@xmlElementName"
+			],
+			"title": "queryFields.queryField",
+			"additionalProperties": false
+		}
+	}
 }

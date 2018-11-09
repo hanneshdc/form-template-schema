@@ -28,6 +28,20 @@
 		},
 		"@parentId": {
 			"type": "string"
+		},
+		"@repeatable": {
+			"enum": [
+				"true"
+			]
+		},
+		"@initialInstances": {
+			"type": "string"
+		},
+		"@minInstances": {
+			"type": "string"
+		},
+		"@maxInstances": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,

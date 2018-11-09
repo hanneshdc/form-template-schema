@@ -28,6 +28,9 @@
 			"$ref": "image.schema.json"
 		},
 		{
+			"$ref": "diagram.schema.json"
+		},
+		{
 			"$ref": "layout/section.schema.json"
 		}
 	],

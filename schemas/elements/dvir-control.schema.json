@@ -26,6 +26,13 @@
 		},
 		"@parentId": {
 			"type": "string"
+		},
+		"#text": {
+			"enum": [
+				"passed",
+				"failed",
+				"na"
+			]
 		}
 	},
 	"additionalProperties": false,

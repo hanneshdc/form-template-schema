@@ -20,7 +20,8 @@
 						"@type": {
 							"enum": [
 								"userContext",
-								"dsFieldId"
+								"dsFieldId",
+								"queryFieldId"
 							]
 						},
 						"@xmlElementName": {

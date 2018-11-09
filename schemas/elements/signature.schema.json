@@ -26,6 +26,11 @@
 		},
 		"@events": {
 			"type": "string"
+		},
+		"@clearBeforeEdit": {
+			"enum": [
+				"true"
+			]
 		}
 	},
 	"additionalProperties": false,
