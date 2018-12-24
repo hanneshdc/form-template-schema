@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node build-scripts/test.ts",
+    "test": "jest",
     "build": "ts-node build-scripts/compile.ts",
     "prebuild": "ts-node build-scripts/postprocess-schemas.ts",
     "pretest": "npm run build"
@@ -12,16 +12,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajv": "^6.5.3"
+  },
+  "devDependencies": {
     "@types/ajv": "^1.0.0",
+    "@types/jest": "^23.3.10",
     "@types/mkdirp": "^0.5.2",
     "@types/recursive-readdir": "^2.2.0",
-    "ajv": "^6.5.3",
+    "@types/xmldom": "^0.1.29",
+    "jest": "^23.6.0",
     "json-schema-ref-parser": "^6.0.1",
     "json-schema-to-typescript": "^6.0.1",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "recursive-readdir": "^2.2.2",
+    "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
-    "typescript": "^3.1.3"
+    "typescript": "^3.1.3",
+    "xmldom": "^0.1.27"
   }
 }
