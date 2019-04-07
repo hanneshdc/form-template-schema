@@ -14,5 +14,6 @@
 		"@xmlElementName",
 		"#text"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"errorMessage": "element is not a option"
 }

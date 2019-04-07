@@ -43,5 +43,6 @@
 		"@required",
 		"@xmlElementName"
 	],
-	"title": "image"
+	"title": "image",
+	"errorMessage": "element is not a image"
 }

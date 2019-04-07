@@ -43,5 +43,6 @@
 		"@required",
 		"@xmlElementName"
 	],
-	"title": "signature"
+	"title": "signature",
+	"errorMessage": "element is not a signature"
 }

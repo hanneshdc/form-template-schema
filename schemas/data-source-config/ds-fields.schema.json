@@ -44,5 +44,6 @@
 		"@xmlElementName",
 		"dsFields"
 	],
-	"title": "dsFields"
+	"title": "dsFields",
+	"errorMessage": "element is not a dsFields"
 }

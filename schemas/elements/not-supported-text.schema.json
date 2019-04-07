@@ -25,5 +25,6 @@
 		"@xmlElementName",
 		"#text"
 	],
-	"title": "notSupportedText"
+	"title": "notSupportedText",
+	"errorMessage": "element is not a notSupportedText"
 }

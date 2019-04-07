@@ -36,5 +36,6 @@
 		"@xmlElementName",
 		"@verificationValue"
 	],
-	"title": "qrcode"
+	"title": "qrcode",
+	"errorMessage": "element is not a qrcode"
 }

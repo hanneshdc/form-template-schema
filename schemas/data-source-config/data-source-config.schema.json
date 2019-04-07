@@ -39,5 +39,6 @@
 		"@version"
 	],
 	"additionalProperties": false,
-	"title": "dataSourceConfig"
+	"title": "dataSourceConfig",
+	"errorMessage": "element is not a dataSourceConfig"
 }

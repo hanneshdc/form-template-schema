@@ -63,5 +63,6 @@
 			"title": "dataSources.dataSource"
 		}
 	},
-	"title": "dataSources"
+	"title": "dataSources",
+	"errorMessage": "element is not a dataSources"
 }

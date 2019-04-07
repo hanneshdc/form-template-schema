@@ -69,5 +69,6 @@
 		"@xmlElementName",
 		"server"
 	],
-	"title": "server"
+	"title": "server",
+	"errorMessage": "element is not a server"
 }

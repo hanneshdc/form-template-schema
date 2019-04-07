@@ -38,5 +38,6 @@
 		"@required",
 		"@xmlElementName"
 	],
-	"title": "checkbox"
+	"title": "checkbox",
+	"errorMessage": "element is not a checkbox"
 }

@@ -45,5 +45,6 @@
 		"@required",
 		"@xmlElementName"
 	],
-	"title": "dvirControl"
+	"title": "dvirControl",
+	"errorMessage": "element is not a dvirControl"
 }

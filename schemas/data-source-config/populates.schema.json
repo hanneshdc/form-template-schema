@@ -52,5 +52,6 @@
 		"@xmlElementName",
 		"populates"
 	],
-	"title": "populates"
+	"title": "populates",
+	"errorMessage": "element is not a populates"
 }

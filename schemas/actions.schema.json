@@ -44,5 +44,6 @@
 			"additionalProperties": false,
 			"title": "actions.action"
 		}
-	}
+	},
+	"errorMessage": "element is not a actions"
 }

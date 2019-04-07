@@ -10,5 +10,6 @@
 		"@xmlElementName"
 	],
 	"additionalProperties": false,
-	"title": "empty"
+	"title": "empty",
+	"errorMessage": "element is not a empty"
 }

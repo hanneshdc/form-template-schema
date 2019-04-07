@@ -70,5 +70,6 @@
 			"additionalProperties": false,
 			"title": "events.event"
 		}
-	}
+	},
+	"errorMessage": "element is not a events"
 }

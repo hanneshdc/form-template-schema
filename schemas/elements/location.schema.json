@@ -38,5 +38,6 @@
 		"@required",
 		"@xmlElementName"
 	],
-	"title": "location"
+	"title": "location",
+	"errorMessage": "element is not a location"
 }

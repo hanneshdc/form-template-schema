@@ -45,5 +45,6 @@
 		"@xmlElementName",
 		"dropdown"
 	],
-	"title": "dropdown"
+	"title": "dropdown",
+	"errorMessage": "element is not a dropdown"
 }

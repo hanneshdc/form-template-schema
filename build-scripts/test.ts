@@ -5,12 +5,14 @@ import { basename } from 'path';
 import _ from 'lodash';
 import betterAjvErrors, { IBetterAjvErrors, IOutputError } from 'better-ajv-errors';
 import colors from 'colors';
+import ajvErrors from 'ajv-errors';
 
 const SCHEMA = 'build/bundle.schema.json';
 const TEST_FILE = 'test-data/qabca-forms.json';
 
 (async () => {
     const ajv = new Ajv({ jsonPointers: true, verbose: true });
+    // ajvErrors(ajv);
     const schema = JSON.parse(readFileSync(SCHEMA, 'utf8'));
 
     const formTemplates = JSON.parse(readFileSync(TEST_FILE, 'utf8'));

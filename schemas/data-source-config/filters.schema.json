@@ -58,5 +58,6 @@
 			"additionalProperties": false,
 			"title": "filters.filter"
 		}
-	}
+	},
+	"errorMessage": "element is not a filters"
 }

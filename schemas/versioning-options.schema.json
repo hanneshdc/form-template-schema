@@ -66,5 +66,6 @@
 			"additionalProperties": false,
 			"title": "versioningOptions.defaultUpdateViewMode"
 		}
-	}
+	},
+	"errorMessage": "element is not a versioningOptions"
 }

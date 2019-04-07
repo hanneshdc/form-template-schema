@@ -45,5 +45,6 @@
 		"@xmlElementName",
 		"radio"
 	],
-	"title": "radio"
+	"title": "radio",
+	"errorMessage": "element is not a radio"
 }

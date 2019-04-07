@@ -40,5 +40,6 @@
 			"$ref": "layout/section.schema.json"
 		}
 	],
-	"title": "anyElement"
+	"title": "anyElement",
+	"errorMessage": "element is not a anyElement"
 }

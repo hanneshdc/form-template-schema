@@ -4,8 +4,9 @@
 			"$ref": "v1.schema.json"
 		},
 		{
-			"$ref": "v2-plus.schema.json"
+			"$ref": "v234.schema.json"
 		}
 	],
-	"title": "root"
+	"title": "root",
+	"errorMessage": "element is not a root"
 }

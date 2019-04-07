@@ -1,5 +1,5 @@
 {
-	"title": "v2Plus",
+	"title": "v234",
 	"type": "object",
 	"properties": {
 		"template": {
@@ -101,7 +101,8 @@
 				"@xmlElementName",
 				"template"
 			],
-			"title": "v2Plus.template"
+			"title": "v234.template"
 		}
-	}
+	},
+	"errorMessage": "element is not a v234"
 }

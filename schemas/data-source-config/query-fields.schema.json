@@ -48,5 +48,6 @@
 			"title": "queryFields.queryField",
 			"additionalProperties": false
 		}
-	}
+	},
+	"errorMessage": "element is not a queryFields"
 }

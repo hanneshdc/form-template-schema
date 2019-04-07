@@ -36,5 +36,6 @@
 		"@xmlElementName",
 		"#text"
 	],
-	"title": "text"
+	"title": "text",
+	"errorMessage": "element is not a text"
 }

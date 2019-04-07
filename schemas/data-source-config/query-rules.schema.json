@@ -57,5 +57,6 @@
 			"title": "queryRules.queryRule"
 		}
 	},
-	"title": "queryRules"
+	"title": "queryRules",
+	"errorMessage": "element is not a queryRules"
 }

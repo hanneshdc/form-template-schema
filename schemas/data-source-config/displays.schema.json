@@ -107,5 +107,6 @@
 			"title": "displays.freeFormText"
 		}
 	},
-	"title": "displays"
+	"title": "displays",
+	"errorMessage": "element is not a displays"
 }

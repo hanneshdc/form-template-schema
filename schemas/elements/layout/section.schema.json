@@ -51,5 +51,6 @@
 		"@xmlElementName",
 		"@required",
 		"section"
-	]
+	],
+	"errorMessage": "element is not a section"
 }

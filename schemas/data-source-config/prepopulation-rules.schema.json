@@ -44,5 +44,6 @@
 			"title": "prepopulationRules.prepopulationRule"
 		}
 	},
-	"title": "prepopulationRules"
+	"title": "prepopulationRules",
+	"errorMessage": "element is not a prepopulationRules"
 }
